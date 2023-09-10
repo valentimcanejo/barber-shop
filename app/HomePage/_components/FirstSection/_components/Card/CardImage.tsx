@@ -13,7 +13,7 @@ const CardImage = ({ imageUrl }: CardImageProps) => {
         height="0"
         sizes="100vw"
         alt="image"
-        className="w-full h-auto"
+        className="w-full h-full"
       />
     </div>
   );

@@ -15,11 +15,11 @@ const SectionTitle = ({
   return (
     <h1
       className={clsx(
-        `text-white drop-shadow-[0_16px_16px_rgba(0,0,0,0.8)]`,
+        `text-white drop-shadow-[0_16px_16px_rgba(0,0,0,0.8)] font-semibold`,
         {
-          "text-3xl": size === "sm",
-          "text-6xl": size === "md",
-          "text-9xl": size === "lg",
+          "text-2xl md:text-3xl": size === "sm",
+          "text-5xl md:text-6xl": size === "md",
+          "text-6xl md:text-8xl": size === "lg",
         },
         twMerge(className)
       )}

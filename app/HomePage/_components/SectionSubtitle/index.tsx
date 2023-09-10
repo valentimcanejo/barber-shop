@@ -19,7 +19,7 @@ const SectionSubtitle = ({
         {
           "text-xl": size === "sm",
           "text-3xl": size === "md",
-          "text-6xl": size === "lg",
+          "text-5xl": size === "lg",
         },
         twMerge(className)
       )}

@@ -1,9 +1,11 @@
 import FirstSection from "./_components/FirstSection";
+import SecondSection from "./_components/SecondSection";
 
 const HomePage = () => {
   return (
-    <main className="flex flex-col gap-8 h-full">
+    <main className="flex flex-col h-full">
       <FirstSection />
+      <SecondSection />
     </main>
   );
 };

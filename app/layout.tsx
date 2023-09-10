@@ -1,10 +1,17 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Roboto, Open_Sans, Teko } from "next/font/google";
+import {
+  Inter,
+  Roboto,
+  Open_Sans,
+  Teko,
+  Barlow_Condensed,
+  Poppins,
+} from "next/font/google";
 import Layout from "./_components/Layout";
 
 const inter = Inter({ subsets: ["vietnamese"] });
-const roboto = Teko({ weight: "400", subsets: ["latin"] });
+const roboto = Poppins({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Alexandre Barber Shop",

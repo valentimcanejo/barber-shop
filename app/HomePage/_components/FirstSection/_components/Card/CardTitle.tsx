@@ -3,7 +3,7 @@ interface CardTitle {
 }
 
 const CardTitle = ({ text }: CardTitle) => {
-  return <h1 className="text-4xl">{text}</h1>;
+  return <h1 className="text-2xl font-semibold">{text}</h1>;
 };
 
 export default CardTitle;
