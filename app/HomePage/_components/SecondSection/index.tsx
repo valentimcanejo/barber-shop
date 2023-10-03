@@ -1,9 +1,11 @@
+import ContactForm from "./_components/ContactForm";
+
 const SecondSection = () => {
   return (
     <section
-      className={`p-8 bg-white items-center flex w-full md:h-full relative`}
+      className={`py-32 px-4 md:w-10/12 mx-auto bg-white items-center flex w-full flex-col md:h-full relative`}
     >
-      teste
+      <ContactForm />
     </section>
   );
 };

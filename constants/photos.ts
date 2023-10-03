@@ -5,6 +5,11 @@ export interface FirstSectionCardProps {
   iconUrl: string;
 }
 
+export interface ItemsListProps {
+  name: string;
+  isDev: boolean;
+}
+
 export const firstSectionCards: FirstSectionCardProps[] = [
   {
     title: "Cabelo",
@@ -30,4 +35,30 @@ export const firstSectionCards: FirstSectionCardProps[] = [
     imageUrl: "/images/product.jpg",
     iconUrl: "/images/products.png",
   },
+];
+
+export const itemsList: ItemsListProps[] = [
+  { name: "Rômulo", isDev: true },
+  { name: "Júlio", isDev: true },
+  { name: "Vini", isDev: true },
+  { name: "Mozart", isDev: true },
+  { name: "Pedro", isDev: true },
+  { name: "Valentim", isDev: true },
+  { name: "Jardel", isDev: true },
+  { name: "Eric", isDev: true },
+];
+
+export const schedulesTime: string[] = [
+  "8:00",
+  "9:00",
+  "10:00",
+  "11:00",
+  "12:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00",
 ];

@@ -1,7 +1,7 @@
 import { FirstSectionCardProps, firstSectionCards } from "@/constants/photos";
 import SectionSubtitle from "../SectionSubtitle";
 import SectionTitle from "../SectionTitle";
-import Card from "./_components/Card";
+import CardList from "./_components/CardList";
 
 const FirstSection = () => {
   return (
@@ -17,18 +17,7 @@ const FirstSection = () => {
           <SectionTitle size="lg" text="Alexandre Barber Shop" />
           <SectionSubtitle size="lg" text="Cabelereiro profissional" />
         </div>
-
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 z-10">
-          {firstSectionCards?.map((cardProps: FirstSectionCardProps) => (
-            <Card
-              key={cardProps.title}
-              iconUrl={cardProps.iconUrl}
-              title={cardProps.title}
-              subtitle={cardProps.subtitle}
-              imageUrl={cardProps.imageUrl}
-            />
-          ))}
-        </div>
+        <CardList cardArray={firstSectionCards} />
       </div>
     </section>
   );

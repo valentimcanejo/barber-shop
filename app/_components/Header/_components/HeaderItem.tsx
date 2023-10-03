@@ -4,7 +4,7 @@ interface HeaderItemProps {
 
 const HeaderItem = ({ text }: HeaderItemProps) => {
   return (
-    <div className="border mx-4 rounded-lg mt-2">
+    <div className="mx-4 rounded-lg mt-2">
       <span>{text}</span>
     </div>
   );

@@ -9,7 +9,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
   return (
-    <main className="h-screen w-screen flex flex-col">
+    <main className="h-screen w-full flex flex-col">
       <Header
         title="Home"
         headerItems={["Preços", "Horários", "Localização"]}

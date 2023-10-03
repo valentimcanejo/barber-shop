@@ -57,7 +57,7 @@ const Header = ({ title, headerItems }: HeaderProps) => {
         </button>
       </div>
       {openHamburger ? (
-        <div className="absolute left-0 bg-black z-50 pb-4 w-full flex flex-col text-center">
+        <div className="absolute md:hidden left-0 bg-black z-50 pb-4 w-full flex flex-col text-center">
           {headerItems?.map((item: string) => (
             <HeaderItem key={item} text={item} />
           ))}
