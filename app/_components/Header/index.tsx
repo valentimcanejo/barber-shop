@@ -3,10 +3,12 @@
 import Image from "next/image";
 import { ReactNode, useState } from "react";
 import HeaderItem from "./_components/HeaderItem";
+import { SocialNetworksProps } from "@/constants/socialNetworks";
+import { convertStringToSVG } from "@/utils/basicFunctions";
 
 interface HeaderProps {
   title: ReactNode;
-  headerItems?: string[];
+  headerItems?: any[];
 }
 
 const Header = ({ title, headerItems }: HeaderProps) => {
@@ -25,13 +27,23 @@ const Header = ({ title, headerItems }: HeaderProps) => {
           <h2 className="border-2 border-black">{title}</h2>
         </div>
         <div className="hidden gap-4 md:flex">
-          {headerItems?.map((item: string) => (
+          {headerItems?.map((item: SocialNetworksProps) => (
             <div
-              key={item}
-              className="border-2 border-black hover:border-b-2 hover:border-b-blue-400 transition h-full"
+              key={item.name}
+              className="border-2 border-black hover:border-b-2 hover:border-b-blue-400 transition"
             >
-              <a href="#" key={item}>
-                {item}
+              <a
+                href={item.link ? item.link : "#"}
+                target="_blank"
+                key={item.name}
+              >
+                {item.icon !== "" ? (
+                  <span
+                    dangerouslySetInnerHTML={convertStringToSVG(item.icon)}
+                  />
+                ) : (
+                  <span>{item.name}</span>
+                )}
               </a>
             </div>
           ))}
@@ -58,8 +70,13 @@ const Header = ({ title, headerItems }: HeaderProps) => {
       </div>
       {openHamburger ? (
         <div className="absolute md:hidden left-0 bg-black z-50 pb-4 w-full flex flex-col text-center">
-          {headerItems?.map((item: string) => (
-            <HeaderItem key={item} text={item} />
+          {headerItems?.map((item: SocialNetworksProps) => (
+            <HeaderItem
+              key={item.name}
+              text={item.name}
+              icon={item.icon}
+              link={item.link}
+            />
           ))}
         </div>
       ) : null}
