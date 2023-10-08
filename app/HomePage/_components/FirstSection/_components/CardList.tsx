@@ -1,3 +1,4 @@
+import { PriceProps } from "@/constants/photos";
 import Card from "./Card";
 
 interface CardProps {
@@ -5,6 +6,7 @@ interface CardProps {
   subtitle: string;
   imageUrl: string;
   iconUrl: string;
+  prices: PriceProps[];
 }
 
 interface CardList {
@@ -21,6 +23,7 @@ const CardList = ({ cardArray }: CardList) => {
           title={card.title}
           subtitle={card.subtitle}
           imageUrl={card.imageUrl}
+          prices={card.prices}
         />
       ))}
     </div>

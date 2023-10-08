@@ -1,8 +1,13 @@
+export interface PriceProps {
+  name: string;
+  price: string;
+}
 export interface FirstSectionCardProps {
   title: string;
   subtitle: string;
   imageUrl: string;
   iconUrl: string;
+  prices: PriceProps[];
 }
 
 export interface ItemsListProps {
@@ -16,24 +21,80 @@ export const firstSectionCards: FirstSectionCardProps[] = [
     subtitle: "Fazemos diversos cortes de cabelo",
     imageUrl: "/images/hair.jpg",
     iconUrl: "/images/tesoura.png",
+    prices: [
+      {
+        name: "Corte simples",
+        price: "R$ 15,00",
+      },
+      {
+        name: "Degradê",
+        price: "R$ 20,00",
+      },
+      {
+        name: "Cabelo e barba",
+        price: "R$ 15,00",
+      },
+    ],
   },
   {
     title: "Barba",
     subtitle: "Fazemos diversos cortes de cabelo",
     imageUrl: "/images/beard.jpg",
     iconUrl: "/images/navalha.png",
+    prices: [
+      {
+        name: "Corte simples",
+        price: "R$ 15,00",
+      },
+      {
+        name: "Degradê",
+        price: "R$ 20,00",
+      },
+      {
+        name: "Cabelo e barba",
+        price: "R$ 15,00",
+      },
+    ],
   },
   {
     title: "Pintar",
     subtitle: "Fazemos diversos cortes de cabelo",
     imageUrl: "/images/nevou.jpg",
     iconUrl: "/images/spray.png",
+    prices: [
+      {
+        name: "Corte simples",
+        price: "R$ 15,00",
+      },
+      {
+        name: "Degradê",
+        price: "R$ 20,00",
+      },
+      {
+        name: "Cabelo e barba",
+        price: "R$ 15,00",
+      },
+    ],
   },
   {
     title: "Produtos",
     subtitle: "Fazemos diversos cortes de cabelo",
     imageUrl: "/images/product.jpg",
     iconUrl: "/images/products.png",
+    prices: [
+      {
+        name: "Corte simples",
+        price: "R$ 15,00",
+      },
+      {
+        name: "Degradê",
+        price: "R$ 20,00",
+      },
+      {
+        name: "Cabelo e barba",
+        price: "R$ 15,00",
+      },
+    ],
   },
 ];
 
