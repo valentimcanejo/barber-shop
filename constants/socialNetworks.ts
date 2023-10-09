@@ -7,7 +7,7 @@ export interface SocialNetworksProps {
 export const socialNetworks: SocialNetworksProps[] = [
   {
     name: "Instagram",
-    link: "https://www.instagram.com/_rvalentim",
+    link: "https://www.instagram.com/alexandrebarber_shop",
     icon: `<svg
         xmlns="http://www.w3.org/2000/svg"
         x="0px"
