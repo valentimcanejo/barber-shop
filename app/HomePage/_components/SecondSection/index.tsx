@@ -83,8 +83,8 @@ const SecondSection = () => {
             ))}
           </Swiper>
         </div>
-      </div>{" "}
-      {/* <ContactForm /> */}
+      </div>
+      <ContactForm />
     </section>
   );
 };

@@ -11,7 +11,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }: LayoutProps) => {
   return (
     <main className="h-screen w-full flex flex-col">
-      <Header title="Home" headerItems={socialNetworks} />
+      {/* <Header title="Home" headerItems={socialNetworks} /> */}
       <div className="h-full">{children}</div>
     </main>
   );

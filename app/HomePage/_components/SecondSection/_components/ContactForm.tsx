@@ -33,11 +33,13 @@ const ContactForm = () => {
 
   const sendData = async (e: FormEvent) => {
     e.preventDefault();
-    console.log(customerName, customerContact);
   };
-  console.log(selectedTime);
+
   return (
-    <form className="flex flex-col gap-6 w-full max-w-lg" onSubmit={sendData}>
+    <form
+      className="flex flex-col gap-6 w-full max-w-xl mt-20 mx-auto"
+      onSubmit={sendData}
+    >
       <label className="font-semibold text-lg">Agente seu Horário</label>
       <div className="flex flex-col gap-2">
         <label>Nome</label>
@@ -54,6 +56,17 @@ const ContactForm = () => {
           onChange={setCustomerName}
           value={customerName}
         /> */}
+      </div>
+      <div className="flex flex-col gap-2">
+        <label>Telefone</label>
+        <TextField
+          id="contact"
+          name="customeContact"
+          placeholder="Digite seu telefone"
+          fullWidth
+          onChange={setCustomerContact}
+          value={customerContact}
+        />
       </div>
       <div className="flex flex-col gap-2">
         <label>Telefone</label>
