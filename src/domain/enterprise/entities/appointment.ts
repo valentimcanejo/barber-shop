@@ -1,6 +1,7 @@
 import { Entity } from "../../../core/entities/entity";
 
 export interface AppointmentProps {
+  id?: string;
   barberId: string;
   clientId: string;
   name: string;
@@ -10,7 +11,13 @@ export interface AppointmentProps {
   updatedAt?: Date;
 }
 
-export class Appointment extends Entity<AppointmentProps> {
+export class Appointment {
+  constructor(public props: AppointmentProps) {}
+
+  get id() {
+    return this.props.id;
+  }
+
   get barberId() {
     return this.props.barberId;
   }

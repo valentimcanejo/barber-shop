@@ -29,7 +29,7 @@ export class FirebaseAppointment implements AppointmentGateway {
       const appointmentReference = this.getAppointmentDocumentRef(id);
       await this.firebaseModule.deleteDoc(appointmentReference);
     } catch (error) {
-      throw new Error("Erro ao cadastrar um novo atendimento.");
+      throw new Error("Erro ao remover um atendimento.");
     }
   }
 
@@ -41,6 +41,8 @@ export class FirebaseAppointment implements AppointmentGateway {
         appointment.toJSON()
       );
     } catch (error) {
+      console.log(error);
+
       throw new Error("Erro ao cadastrar um novo atendimento.");
     }
   }
@@ -48,14 +50,14 @@ export class FirebaseAppointment implements AppointmentGateway {
   async save(appointment: Appointment): Promise<void> {
     try {
       const appointmentReference = this.getAppointmentDocumentRef(
-        appointment.id
+        appointment.id!
       );
       await this.firebaseModule.updateDoc(
         appointmentReference,
         appointment.toJSON()
       );
     } catch (error) {
-      throw new Error("Erro ao cadastrar um novo atendimento.");
+      throw new Error("Erro ao editar um atendimento.");
     }
   }
 

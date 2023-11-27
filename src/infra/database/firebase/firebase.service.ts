@@ -6,6 +6,7 @@ import { getAuth } from "firebase/auth";
 import "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
+import * as Firestore from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -29,3 +30,4 @@ export const firebaseAnalytics =
   typeof window !== "undefined" && getAnalytics(app);
 
 export default db;
+export const FirebaseModule = Firestore;

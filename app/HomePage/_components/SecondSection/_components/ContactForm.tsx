@@ -4,7 +4,13 @@ import { Button } from "@/app/_components/Button";
 import Select from "@/app/_components/Select";
 import { TextField } from "@/app/_components/TextField";
 import { schedulesTime } from "@/constants/photos";
+import { CreateAppointmentUseCase } from "@/src/domain/application/use-cases/create-appointment";
+import { FirebaseAppointment } from "@/src/infra/database/firebase/repositories/firebase-appointment-repository";
 import { FormEvent, useEffect, useState } from "react";
+import db, {
+  FirebaseModule,
+} from "@/src/infra/database/firebase/firebase.service";
+import { Registry, container } from "@/src/infra/container-registry";
 
 interface SelectedItemProps {
   text: string;
@@ -33,6 +39,20 @@ const ContactForm = () => {
 
   const sendData = async (e: FormEvent) => {
     e.preventDefault();
+    // const appointment = new FirebaseAppointment(FirebaseModule);
+    // const useCase = new CreateAppointmentUseCase(appointment)
+
+    const useCase = container.get<CreateAppointmentUseCase>(
+      Registry.CreateAppointmentUseCase
+    );
+
+    // await useCase.execute({
+    //   name: "teste",
+    //   price: "teste",
+    //   schedule: new Date(),
+    //   barberId: "teste",
+    //   clientId: "teste",
+    // });
   };
 
   return (

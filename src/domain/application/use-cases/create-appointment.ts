@@ -31,6 +31,8 @@ export class CreateAppointmentUseCase {
       schedule,
       barberId,
       clientId,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     });
 
     this.appointmentGate.create(appointment);
